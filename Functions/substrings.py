@@ -11,4 +11,10 @@
 # parse_and_display(‘John Doe’) 
 # parse_and_display(‘Grace Flores’) 
 # parse_and_display(‘JB Oinonen’)
-
+# CHALLENGE:  
+# ∗ Modify your script to work with names of one, two or three words. Output should 
+# include middle name if applicable. Example names to use when testing your new 
+# function: 
+# Lorde 
+# Billie Eilish 
+# Megan Thee Stallion 
