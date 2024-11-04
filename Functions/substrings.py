@@ -18,3 +18,12 @@
 # Lorde 
 # Billie Eilish 
 # Megan Thee Stallion 
+
+
+name= 'Zainab Unisa'
+
+def parse_and_display(name):
+    namesplit= name.split()
+
+    print(f'first name: {namesplit[0]}')
+    print(f'last name: {namesplit[1]}')
