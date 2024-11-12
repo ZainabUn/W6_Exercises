@@ -20,10 +20,24 @@
 # Megan Thee Stallion 
 
 
+
+###you can also use find and rfind to do this by finding the space and do rfind for lastname
+
+
 name= 'Zainab Unisa'
 
 def parse_and_display(name):
-    namesplit= name.split()
+   split=name.split()
+   if name.split==1:
+    print(f'first name: {split[0]}')
+    print(f'last name: {split[1]}')
+   elif name.split==2:
+    print(f'first name: {split[0]}')
+    print(f'middle name: {split[1]}')
+    print(f'last name: {split[2]}')
+   else:
+    print(f'{name}')
 
-    print(f'first name: {namesplit[0]}')
-    print(f'last name: {namesplit[1]}')
+
+parse_and_display(name)
+    
