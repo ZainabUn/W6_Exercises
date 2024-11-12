@@ -17,19 +17,24 @@
 # can you get your script to work with this list input?
 # 5. Remember to commit changes when you are done!
 
-input= input("Enter as supplier:productcode-size ")
+
 
 def getsuppliercode(inp):
-    semicolon=input.split(' : ')
-    print(semicolon)
+    semicolon=inp.find(':')
+    return inp[:semicolon]
 def getproductnum(inp):
-    next=input.split('-')
-    print(next)
+    semicolon=inp.find(':')
+    dash=inp.find('-')
+    return inp[semicolon:dash]
+    
 def getsize(inp):
-    next2=input.split('-')
-    print(next2)
+    afterdash=inp.rfind('-')
+    return inp[afterdash:]
+    
+input=str( input("Enter supplier as :product:code-size "))
+
 
    
-getsuppliercode(input)
-getproductnum(input)
-getsize(input)
+print(f'Supplier code:{getsuppliercode(input)} ')
+print(f'Product Name : {getproductnum(input)}')
+print(f'Size: {getsize(input)}')
