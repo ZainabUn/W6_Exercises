@@ -17,10 +17,31 @@ hr_list = [('0123', 'HR', 'Rebecca Yang', '69000'), ('0121', 'IT', 'Mark Blick',
 ('0068', 'IT', 'Kahna Larsen', '112000'), ('0234', 'OPS', 'Jim Smith', '54000')] 
 
 Rebecca,Mark,Kahna,Jim= hr_list
-num1=Mark[0]
-num2=Mark[1]  
-num3=Mark[2]   
-print(num3)
-num3.replace("Blick", "Blick-Hawley")
-print(num3)
+# num1=Mark[0]
+# num2=Mark[1]  
+# num3=Mark[2]   
+# print(num3)
+Mark=list(Mark)
+Mark[2]=Mark[2].replace('Mark Blick', 'Mark Blick-Hawley')
+print(Mark)
+# Mark=tuple(Mark)
+employee,deptcode,name,salary=Mark
+# employee=str(employee + '|')
+# deptcode=str(deptcode + '|')
+# # .format(deptcode,'|')
+# name=str(name + '|')
+# # .format(name,'|')
+salary=int(salary)
+format="{:,}".format(salary)
+print( f'{Mark[0]}{' |' }{Mark[1]}{' | '}{Mark[2]}{' | '}{format}' )
+
+
+Jim=list(Jim)
+Jim[1]=Jim[1].replace('OPS', 'CS')
+print(Jim)
+Jim=tuple(Jim)
+employee,deptcode,name,salary=Jim
+salary=int(salary)
+format="{:,}".format(salary)
+print( f'{employee}{' |' }{deptcode}{' | '}{name}{' | '}{format}' )
 
